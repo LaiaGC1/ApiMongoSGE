@@ -15,6 +15,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/series', require('./routes/serie.route'));
+app.use('/api/categorias', require('./routes/categoria.route'))
 app.use('/',(req, res) => res.send('API in /api/series'));
 
 // Starting the server

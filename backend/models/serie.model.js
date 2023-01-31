@@ -7,15 +7,11 @@ const serieSchema = new Schema({
     sinopsis: {type: String, required: true},
     imagenes: [{type: String, required: true}],
     chapters: {type: Number, required: true},
-    category: [{
-        nombre: {type: String, required: true, default: null},
-        imagencategoria: {type: String, required: true, default: null}
-    }],
+    category: [{type: String, required: true, default: null}],
     puntuations:[{
         email: {type: String, required: true},
         puntuationuser: {type: Number, required: true},
-    }]
-    ,
+    }],
 });
 
-module.exports = mongoose.model('Serie', serieSchema, 'series');
+module.exports = mongoose.model('bdseries', serieSchema, 'series');
